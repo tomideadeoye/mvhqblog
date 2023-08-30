@@ -1,0 +1,21 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "cSpell.words": [
+    "buttondown",
+    "contentlayer",
+    "Giscus",
+    "iconamoon",
+    "mailchimp",
+    "mdast",
+    "nocompatible",
+    "opentelemetry",
+    "postbuild",
+    "Umami",
+    "vfile"
+  ],
+  "[xml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "tailwindCSS.experimental.classRegex": ["cls`([^`]*)", "raw`([^`]*)"]
+}

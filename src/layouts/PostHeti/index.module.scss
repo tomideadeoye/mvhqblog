@@ -1,0 +1,110 @@
+// 暗色主题参考：
+// - https://github.com/sivan/heti/blob/9c18b4f97e1e645b4dbf1db45e7673f760e7d97c/_site/index.css
+// - https://github.com/sivan/heti/blob/9c18b4f97e1e645b4dbf1db45e7673f760e7d97c/_site/heti.css
+
+.heti-custom {
+  :global {
+    .card {
+      @apply relative rounded-sm text-left;
+      @apply sm:-left-[20%] sm:w-[140%];
+
+      margin-block-start: 24px;
+      margin-block-end: 24px;
+      padding-block-start: 12px;
+      padding-block-end: 12px;
+      padding-inline-start: 12px;
+      padding-inline-end: 12px;
+
+      @screen sm {
+        padding-block-start: 24px;
+        padding-block-end: 24px;
+        padding-inline-start: 32px;
+        padding-inline-end: 32px;
+        box-shadow: 0 4px 16px hsla(0deg, 0%, 0%, 0.16);
+      }
+
+      &-vertical-container {
+        @apply h-[30em] w-full overflow-auto;
+        border: 1px solid hsl(0deg, 0%, 93%);
+        writing-mode: vertical-rl;
+      }
+
+      > figcaption {
+        @apply inline-block;
+        margin-block-start: 16px;
+        padding-block-start: 4px;
+        padding-block-end: 3px;
+        padding-inline-start: 0;
+        padding-inline-end: 72px;
+        line-height: 24px;
+        border-block-start: 1px solid hsl(0deg, 0%, 93%);
+      }
+    }
+
+    a {
+      color: #177cb0;
+    }
+  }
+}
+
+:is(:global(.dark)) {
+  .heti-custom:global(.heti) {
+    :global {
+      .card {
+        @screen sm {
+          box-shadow: 0 4px 16px #e5e5e5;
+        }
+
+        .card-vertical-container {
+          border-color: hsl(0deg, 0%, 20%);
+        }
+
+        > figcaption {
+          border-block-start: 1px solid hsl(0deg, 0%, 20%);
+        }
+      }
+    }
+
+    blockquote {
+      background-color: hsla(0deg, 0%, 100%, 0.054);
+    }
+
+    hr {
+      background-color: hsl(0deg, 0%, 25%);
+    }
+
+    pre {
+      background-color: hsla(0deg, 0%, 100%, 0.054);
+    }
+
+    table {
+      border-color: hsl(0deg, 0%, 25%);
+    }
+
+    th,
+    td {
+      border-color: hsl(0deg, 0%, 25%);
+    }
+
+    mark {
+      background-color: hsla(58deg, 100%, 15%, 0.88);
+    }
+
+    sup:target,
+    sup a:target {
+      background-color: hsl(210deg, 40%, 38%);
+    }
+
+    u[title] {
+      border-block-end-color: hsla(0deg, 0%, 100%, 0.54);
+    }
+
+    .heti-fn {
+      border-block-start-color: hsl(0deg, 0%, 25%);
+    }
+
+    .heti-fn li:target {
+      background-color: hsl(210deg, 40%, 38%);
+    }
+  }
+}
